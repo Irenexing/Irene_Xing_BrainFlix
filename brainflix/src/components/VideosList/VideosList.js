@@ -2,7 +2,8 @@ import './VideoList.scss';
 import videosData from '../../data/videos.json';
 import {useState} from 'react';
 
-function VideosList({videosData}) {
+const VideosList = ({videosId, setVideosData}) => {
+
     
     return (
     <section className = "videolist">

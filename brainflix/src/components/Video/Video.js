@@ -6,8 +6,9 @@ const Video = ({videosDetailId}) => {
 
     return (
     <section className = "activevideo">
+
             <div className="activevideo__block">
-            <video className="activevideo__photo" src={videoDetailsIndex.video} alt={"activevideo"}/>
+            <video className="activevideo__photo" src={videoDetailsIndex.video+"?api_key=irene"} alt={"activevideo"}/>
                 <div className="activevideo__title">{videoDetailsIndex.title}</div>
                 <div className="activevideo__block-bottom">
                     <div className="activevideo__block-bottomleft">
@@ -22,10 +23,10 @@ const Video = ({videosDetailId}) => {
                         <div className="activevideo__likes">
                         <img className="activevideos__likes-icon" src={"../../assets/Icons/likes.svg"} alt={"likesicon"}/>
                         <div className="activevideo__likesnumber">{videoDetailsIndex.likes}</div>
-                        </div>
+                        </div> 
                     </div>
                 </div>
-                <div className="activevideo__description">{videoDetailsIndex.descrption}</div>
+                <div className="activevideo__description">{videoDetailsIndex.description}</div> 
             </div>
         
         
