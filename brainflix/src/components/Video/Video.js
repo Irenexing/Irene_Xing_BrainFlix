@@ -17,7 +17,7 @@ const Video = ({videosDetailId}) => {
                     </div>
                     <div className="activevideo__block-bottomrright">
                         <div className="activevideo__views">
-                            <img className="activevideos__views-icon" src={"../../assets/Icons/views.svg"} alt={"viewicon"}/>
+                            <img className="activevideos__views-icon" src={require("../../assets/Icons/views.svg")} alt={"viewicon"}/>
                             <div className="activevideo__viewnumber">{videoDetailsIndex.views}</div>
                         </div>
                         <div className="activevideo__likes">

@@ -4,7 +4,6 @@ import {useState} from 'react';
 
 const VideosList = ({videosId, setVideosData}) => {
 
-    
     return (
     <section className = "videolist">
         <h2 className="videolist__header"> NEXT VIDEOS</h2>
