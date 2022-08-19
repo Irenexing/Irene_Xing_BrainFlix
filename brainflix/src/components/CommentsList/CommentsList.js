@@ -1,25 +1,21 @@
 import './CommentsList.scss';
 
-function CommentsList() {
+import videosDetailData from '../../data/video-details.json';
+
+const CommentsList = ({videosDetailId}) => {
+    let CommentsIndex = videosDetailData.find(comments => comments.id===videosDetailId);
 
 return (
-    <>
     <section className = "list__block">
-        <div className = "list__block-left">
-            <img className= "list__avatar"/>
-        </div>
+            <img className= "list__avatar" alt="avatar"/>
         <div className = "list__block-right">
             <div className = "list__block-righttop">
-                <div className ="list__name"></div>
-                <div className ="list__date">
-let newDate = new Date(videoDetails[i].timestamp);
-date.innerText = newDate.toLocaleDateString("en-US");
-                </div>
-                <p className="list__paragraph"></p>
+                <div className ="list__name">{CommentsIndex.comments.name}</div>
+                <div className ="list__date">{new Date(CommentsIndex.comments.timestamp).toLocaleDateString("en-US")}</div>
             </div>
+                <p className="list__paragraph">{CommentsIndex.comments.comment}</p>
         </div>
     </section>
-    </>
 )
 
 }

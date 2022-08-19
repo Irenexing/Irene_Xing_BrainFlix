@@ -4,3 +4,48 @@
 @use '../../styles/partials/mixins' as *;
 @use '../../styles/partials/colors';
 
+.activevideo {
+    &__block {
+        display: flex;
+        flex-direction: column;
+    }
+    &__title {
+        font-size: 2.0625rem;
+        font-weight: 700;
+    }
+    &__block-bottom {
+        border-top: 2px solid colors.$primary-silver;
+        border-bottom: 2px solid colors.$primary-silver;
+        display: flex;
+        flex-direction: row;
+        &left {
+            display: flex;
+            flex-direction: column;
+        }
+        &right {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+    &__channel {
+        font-weight: 700;
+        font-size: .875rem;
+    }
+    &__timestamp {
+        color: colors.$primary-silver;
+    }
+    &__views {
+        display: flex;
+        flex-direction: row;
+        &number{
+        color: colors.$primary-silver;
+        }
+    }
+    &__likes {
+        display: flex;
+        flex-direction: row;
+        &number{
+        color: colors.$primary-silver;
+        }
+    }
+}

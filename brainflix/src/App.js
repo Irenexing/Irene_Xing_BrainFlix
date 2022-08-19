@@ -1,20 +1,33 @@
 import './App.scss';
 import Header from './components/Header/Header';
 import Video from './components/Video/Video';
-import {useState} from 'react';
+import VideosList from './components/VideosList/VideosList';
 import Comments from './components/Comments/Comments';
+// import CommentsList from './components/CommentsList/CommentsList';
 import videosDetailData from './data/video-details.json';
 import videosData from './data/videos.json';
-
+import {useState} from 'react';
 
 function App() {
-  const [videosDetail, setvideosDetail]= useState(videosDetailData) 
+  const [videosDetailId, setVideosDetail]= useState(videosDetailData[0].id);
+  const [videosId, setVideosData]= useState(videosData[0]).id;
   return (
     <>
     <Header/>
-    <Video videosDetailData={videosDetailData}/>
+    <Video 
+    videosDetailId={videosDetailId}
+    setVideosDetail={setVideosDetail}
+    />
     <Comments/>
-    <nextVideos videosData={videosData}/>
+    {/* <CommentsList 
+    videosDetailId={videosDetailId}
+    setVideosDetail={setVideosDetail}
+    /> */}
+
+    <VideosList 
+    videosId={videosId}
+    setVideosData={setVideosData}
+    />
     </>
   );
 }

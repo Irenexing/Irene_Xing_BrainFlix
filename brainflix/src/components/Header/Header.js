@@ -4,7 +4,7 @@ function Header() {
   return (
     <>
       <header className="header">
-        <a href="../../App.js">
+        <a href="http://192.168.2.11:3000">
           <img className="header__logo"
             src={require("../../assets/Logo/BrainFlix-logo.svg").default}
             alt={"BrainFlix"}/>
