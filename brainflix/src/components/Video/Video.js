@@ -1,12 +1,12 @@
 import './Video.scss';
 
 function Video() {
-  return (
- <>
-    <section className="video">
 
-    </section>
- </>
+    
+  return (
+    <>
+    {/* <video className="video" onclick= {updateVideo}> {currentVideo}</video> */}
+    </>
   );
 }
 
