@@ -10,14 +10,16 @@
         padding:  3rem 4rem 2.25rem 4rem;
        }
     @include desktop {
-        padding:  3rem 4rem 2.25rem 4rem;
+        padding:  3rem 0rem 2.25rem 4rem;
+        width: auto;
        }
     &__block {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        width: 100%;
-
+        @include desktop {
+            justify-content: flex-start;
+        }
         &-right{
             display: flex;
             flex-direction: column;
@@ -27,6 +29,9 @@
                 align-items: flex-end;
                 width: 80vw;
                 justify-content: space-between;
+            }
+            @include desktop {
+                width: auto; 
             }
             
             &--tablet {
@@ -55,7 +60,7 @@
             margin-bottom: 0;
         }
         @include desktop {
-            width: auto;
+            width: 40vw;
         }
     }
     &__description {

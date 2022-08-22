@@ -20,6 +20,9 @@
                 justify-content: space-between;
                 padding: 1rem 4rem;
             }
+            @include desktop {
+                padding: 1rem;
+            }
 
             &left {
                 display: flex;
