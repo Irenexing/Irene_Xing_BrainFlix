@@ -9,5 +9,6 @@
     @include desktop {
         display: flex; 
         justify-content: flex-start;
+        width: 100vw;
     }
 }

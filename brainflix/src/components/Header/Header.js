@@ -11,8 +11,8 @@ function Header() {
         </a>
           <div className="header__search">
             <input className="header__search-bar" type={"text"} name="search" placeholder="         Search"/>
-            <img className="header__search-avatar"src={require("../../assets/Images/Mohan-muruge.jpg")} alt={"avatar"}/>
             <button className="header__button">UPLOAD</button>
+            <img className="header__search-avatar"src={require("../../assets/Images/Mohan-muruge.jpg")} alt={"avatar"}/>
           </div>
       </header>
       
