@@ -26,6 +26,11 @@
             width: 13vw;
             height: 8vw;
         }
+        @include tablet {
+            width: 6rem;
+            height: 4rem;
+            object-fit: cover;
+        }
     }
     &__title {
         font-weight: 600;
@@ -34,7 +39,6 @@
         display: flex;
         &-right{
             margin-left: 1rem;
-            
 
         }
     }
