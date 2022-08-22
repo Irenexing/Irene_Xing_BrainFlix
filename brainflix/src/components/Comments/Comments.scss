@@ -7,21 +7,17 @@
 .form {
     padding: 0rem 1rem 1rem 1rem;
     @include tablet {
-        padding:  3rem 2.25rem 2.25rem 2.25rem;
+        padding:  3rem 4rem 2.25rem 4rem;
        }
-       @include desktop {
-        padding: 1.5rem 7.875rem 3rem 7.875rem;
-    }
+    @include desktop {
+        padding:  3rem 4rem 2.25rem 4rem;
+       }
     &__block {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         width: 100%;
 
-        @include desktop {
-            padding: 1rem 12rem;
-            justify-content: unset;
-        }
         &-right{
             display: flex;
             flex-direction: column;
@@ -33,9 +29,10 @@
             }
             &--tablet {
                 @include tablet {
-                    distplay: flex;
+                    display: flex;
                     flex-direction: column;
                 }
+
             }
         }
     }
@@ -48,6 +45,7 @@
         border-radius: .25rem;
         border: 1px solid colors.$secondary-mercury;
         height: 5rem;
+        background-color: colors.$secondary-alabaster;
         @include tablet {
             padding: 1rem;
             width: 60vw;

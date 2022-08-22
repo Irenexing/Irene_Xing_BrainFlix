@@ -8,6 +8,7 @@
 .header{
     padding: 1rem;
     width: 100%;
+
     @include tablet {
       display: flex;
       flex-direction: row;
@@ -24,24 +25,18 @@
       align-items: center;
       width: 100%;
       max-height: 1.5625rem;
-      @include tablet {
-        order: 1;
-      }
-    }
-    &__form {
-      @include tablet {
-        justify-content: flex-end;
-      }
+      
     }
     &__search { 
       display: flex;
       justify-content: space-between;
+      flex-direction: column;
       @include tablet {
       display: unset;
+      justify-content: right;
       align-items: flex-end;
-      width: 100%;
+      width: auto;
       }
-  
       &-bar {
         font-size: 1rem;
         margin: 1rem 0rem;
@@ -55,8 +50,8 @@
          background-position-x: 0.5rem;
          background-repeat: no-repeat;
          @include tablet {
-          width: 40vw;
-          order: 2;
+          width: 35vw;
+          order: 1;
           margin: 0rem 1rem;
           font-size: 0.8rem;
           }
@@ -68,13 +63,16 @@
         border-radius: 50%;
         width: 3rem;
         height: 3rem;
-        margin: 1rem 0rem 1rem 0rem;
+
         @include tablet{
-          order: 4;
-          margin: 0rem 0rem -1rem 0rem
+          order: 3;
+          margin: 0rem 0rem -1rem 0rem;
         }
       }
     }
+  
+      
+    
       &__button {
         border-radius: .25rem;
         width: 100%;
@@ -94,11 +92,12 @@
         @include tablet {
             font-size: 12px;  
             width: 10rem;
-            order: 3;
-            padding: 1rem 2rem;
-            margin: 0rem 1rem;
+            order: 2;
+            padding: 1rem 0rem;
+            margin-left: 1rem;
         
         }
-       
+
+        }
       }
-    }
+    

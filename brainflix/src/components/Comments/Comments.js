@@ -1,12 +1,12 @@
 import './Comments.scss';
 
+
 function Comments() {
 
 
   return (
     <>
       <section className="comment">
-        <div></div>
         <form className="form">
             <div className =" form__block">
                 <img className="form__avatar"src={require("../../assets/Images/Mohan-muruge.jpg")} alt={"avatar"}/>
@@ -20,7 +20,6 @@ function Comments() {
              </div>
         </form>
       </section>
-      <div className="comments"></div>
       </>
   );
 }

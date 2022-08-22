@@ -8,19 +8,21 @@
       &__block {
         display: flex;
         border-bottom: 1px solid colors.$secondary-mercury;
-        padding-top: 1rem;
-        margin: 0;
-        width: 100%;
+        margin: 1rem;
+        width: auto;
         height: auto;
   
         @include tablet {
           margin: 1rem 4rem;
         }
         @include desktop {
-          margin: 1rem 20rem;
+          width: 70vw;
         }
         &-right {
             width:  100%;
+            @include desktop {
+              width: 70vw;
+            }
         }
         &-righttop {
         display: flex;

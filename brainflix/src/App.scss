@@ -5,3 +5,9 @@
 @use './styles/partials/colors';
 
 
+.desktop-container {
+    @include desktop {
+        display: flex; 
+        justify-content: flex-start;
+    }
+}
