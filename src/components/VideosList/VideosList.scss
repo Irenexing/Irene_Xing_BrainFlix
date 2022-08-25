@@ -1,0 +1,45 @@
+@use '../../styles/partials/global';
+@use '../../styles/partials/typography';
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/colors';
+
+.videolist {
+    padding: 0rem 1rem;
+    @include tablet {
+        padding:  0rem 2.25rem 2.25rem 4.3rem;
+       }
+       @include desktop {
+        padding: 1rem;
+        border-left: 1px solid colors.$primary-silver;
+       }
+    &__header {
+        color: colors.$primary-silver;
+        font-size: 1rem;
+    }
+    &__photo {
+        border-radius: .25rem;
+        width: 30vw;
+        height: 20vw;
+        margin-bottom: 1rem;
+        @include tablet {
+            width: 13vw;
+            height: 8vw;
+        }
+        @include tablet {
+            width: 6rem;
+            height: 4rem;
+            object-fit: cover;
+        }
+    }
+    &__title {
+        font-weight: 600;
+    }
+    &__block {
+        display: flex;
+        &-right{
+            margin-left: 1rem;
+
+        }
+    }
+}

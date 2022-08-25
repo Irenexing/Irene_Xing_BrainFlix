@@ -1,0 +1,120 @@
+@use '../../styles/partials/global';
+@use '../../styles/partials/typography';
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/colors';
+
+
+.header{
+    padding: 1rem;
+    width: 100%;
+
+    @include tablet {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+    } 
+    @include desktop {
+      padding: 1rem 8rem;
+    }
+    &__logo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      max-height: 1.5625rem;
+      margin-bottom: 1rem;
+      @include tablet {
+        margin-bottom: 0rem;
+      }
+    }
+    &__container {
+      display: flex;
+      align-items:center;
+      justify-content: space-between;
+    }
+    &__search { 
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+      @include tablet {
+      flex-direction: row;
+      justify-content: right;
+      align-items: flex-end;
+      width: auto;
+      }
+      &-bar {
+        font-size: 1rem;
+         width: 80vw;
+         height: 3rem;
+         border-radius: .25rem;
+         border-color: colors.$primary-silver;
+         background-image: url("../../assets/Icons/search.svg");
+         background-size: 1.5rem;
+         background-position-y: 0.5rem;
+         background-position-x: 0.5rem;
+         background-repeat: no-repeat;
+         @include tablet {
+          width: 35vw;
+          margin: 0rem 1rem;
+          font-size: 0.8rem;
+          }
+          @include desktop {
+            width: 20vw;
+            }
+      }
+      
+      &-avatar { 
+        border-radius: 50%;
+        width: 3rem;
+        height: 3rem;
+        @include tablet {
+          display: none;
+        }
+
+       &--tablet {
+        border-radius: 50%;
+        width: 3rem;
+        height: 3rem;
+        display: none;
+        @include tablet {
+          display: unset;
+          margin-left: 1rem;
+        }
+       }
+      }
+
+    }
+  
+      
+    
+      &__button {
+        border-radius: .25rem;
+        width: 100%;
+        border-radius: 4px;
+        font-weight: 500;
+        font-size: 1rem;
+        background-color: colors.$primary-blue;
+        color: colors.$primary-white;
+        border-color: colors.$primary-blue;
+        padding: 1rem 0rem;
+        height: 3rem;
+        margin-top: 1rem;
+        background-image: url("../../assets/Icons/upload.svg");
+        background-size: 2rem;
+        background-position-y: 0.5rem;
+        background-position-x: 0.25rem;
+        background-repeat: no-repeat;
+        @include tablet {
+            font-size: 12px;  
+            width: 10rem;
+            padding: 1rem 0rem;
+            margin-left: 1rem;
+        
+        }
+
+        }
+      }
+    

@@ -1,0 +1,105 @@
+@use '../../styles/partials/global';
+@use '../../styles/partials/typography';
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/colors';
+
+.form {
+    padding: 0rem 1rem 1rem 1rem;
+    @include tablet {
+        padding:  3rem 4rem 2.25rem 4rem;
+       }
+    @include desktop {
+        padding:  3rem 0rem 2.25rem 4rem;
+        width: auto;
+       }
+    &__block {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        @include desktop {
+            justify-content: flex-start;
+        }
+        &-right{
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            @include tablet {
+                flex-direction: row;
+                align-items: flex-end;
+                width: 80vw;
+                justify-content: space-between;
+            }
+            @include desktop {
+                width: auto; 
+            }
+            
+            &--tablet {
+                @include tablet {
+                    display: flex;
+                    flex-direction: column;
+                }
+
+            }
+        }
+    }
+    &__box {
+        min-height: 2.25rem;
+        width: 100%;
+        margin-top: .25rem;
+        margin-bottom: 1rem;
+        padding: .75rem;
+        border-radius: .25rem;
+        border: 1px solid colors.$secondary-mercury;
+        height: 5rem;
+        background-color: colors.$secondary-alabaster;
+        @include tablet {
+            padding: 1rem;
+            width: 55vw;
+            height: auto;
+            margin-bottom: 0;
+        }
+        @include desktop {
+            width: 40vw;
+        }
+    }
+    &__description {
+        color: colors.$primary-silver;
+
+    }
+    &__avatar {
+        border-radius: 50%;
+        width: 3rem;
+        height: 3rem;
+        margin-right: 1rem;
+        margin-top: 1.5rem;
+        @include tablet{
+            width: 3rem;
+            height: 3rem;
+        }
+
+    }
+    &__button {
+        border-radius: .25rem;
+        width: 100%;
+        border-radius: 4px;
+        font-weight: 500;
+        font-size: 1rem;
+        background-color: colors.$primary-blue;
+        color: colors.$primary-white;
+        border-color: colors.$primary-blue;
+        padding: 1rem 0rem;
+        height: 3rem;
+        background-image: url("../../assets/Icons/add_comment.svg");
+        background-size: 2rem;
+        background-position-y: 0.5rem;
+        background-position-x: 0.25rem;
+        background-repeat: no-repeat;
+        @include tablet {
+            font-size: 12px;  
+            width: 20vw;
+            margin-left: 1rem;
+
+        }
+    }
+}

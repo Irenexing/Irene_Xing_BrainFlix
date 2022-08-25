@@ -1,0 +1,14 @@
+@use '../../styles/partials/global';
+@use '../../styles/partials/typography';
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/colors';
+
+
+.desktop-container {
+    @include desktop {
+        display: flex; 
+        justify-content: flex-start;
+        width: 100vw;
+    }
+}

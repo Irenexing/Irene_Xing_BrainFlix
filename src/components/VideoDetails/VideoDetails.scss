@@ -1,0 +1,118 @@
+@use '../../styles/partials/global';
+@use '../../styles/partials/typography';
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/colors';
+
+.activevideo {
+    &__block {
+        display: flex;
+        flex-direction: column;
+        &-bottom {
+            border-top: 1px solid colors.$primary-silver;
+            border-bottom: 1px solid colors.$primary-silver;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin: 1rem;
+            @include tablet {
+                border-top: 0px solid colors.$primary-silver;
+                justify-content: space-between;
+                padding: 1rem 4rem;
+            }
+            @include desktop {
+                padding: 1rem;
+            }
+
+            &left {
+                display: flex;
+                flex-direction: column;
+                @include tablet {
+                    flex-direction: row;
+                    justify-content: space-between;
+                }
+            }
+            &right {
+                display: flex;
+                flex-direction: column;
+                padding-right: 2rem;
+                @include tablet {
+                    flex-direction: row;
+                    justify-content: space-between;
+                }
+            }
+
+        }
+    }
+    &__title {
+        font-size: 2.0625rem;
+        font-weight: 600;
+        padding: 1rem;
+            @include tablet {
+                margin: 1rem 3rem; 
+            }
+            @include tablet {
+                width: 70vw;
+            }
+    }
+    &__channel {
+        font-weight: 700;
+        padding-top: 1rem;
+        font-size: 1.25rem;
+    }
+    &__timestamp {
+        color: colors.$primary-silver;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        font-size: 1.25rem;
+        @include tablet {
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+    }
+    &__views {
+        display: flex;
+        flex-direction: row;
+        &-icon {
+            width: 20px;
+            height: 20px; 
+            margin-top:1rem;
+        }
+        &number{
+        color: colors.$primary-silver;
+        font-size: 1.25rem;
+        padding: 1rem 1rem 0rem 1rem;        
+        @include tablet {
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+        }
+    }
+    &__likes {
+        display: flex;
+        flex-direction: row;
+        &-icon {
+            width: 20px;
+            height: 20px; 
+            margin-top:1rem;
+        }
+        &number{
+        color: colors.$primary-silver;
+        font-size: 1.25rem;
+        padding: 1rem 1rem 0rem 1rem;        
+        @include tablet {
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+        }
+    }
+    &__description {
+        padding: 1rem;
+        @include tablet{
+            padding: 0rem 4rem;
+        }
+        @include desktop {
+            width: 70vw;
+            } 
+    }
+}
