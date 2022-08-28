@@ -1,11 +1,11 @@
 import './CommentsList.scss';
 
 
-function CommentsList ({videosDetailId}) {
+function CommentsList ({activeVideo}) {
    
     return (
         <>
-        {videosDetailId.comments.map((comments) => {
+        {activeVideo.comments.map((comments) => {
             return (
             <section className = "list__block" key={comments.timestamp}>
                 <div className= "list__avatar"></div>

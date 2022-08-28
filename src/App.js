@@ -13,7 +13,6 @@ function App() {
         <Route path=":videoId" element={<Home />} />
         <Route path="/upload" element={<Upload/>} />
       </Routes>
-      <Footer />
     </BrowserRouter>
   );
 }

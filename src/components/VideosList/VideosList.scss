@@ -34,6 +34,10 @@
     }
     &__title {
         font-weight: 600;
+        color: colors.$primary-black;
+    }
+    &__author {
+        color: colors.$primary-black;
     }
     &__block {
         display: flex;

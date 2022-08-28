@@ -1,0 +1,88 @@
+@use '../../styles/partials/global';
+@use '../../styles/partials/typography';
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/colors';
+
+.upload {
+    padding: 0rem 1rem 1rem 1rem;
+    @include tablet {
+        padding:  3rem 2.25rem 2.25rem 2.25rem;
+       }
+       @include desktop {
+        padding: 1.5rem 7.875rem 3rem 7.875rem;
+    }
+    &__title {
+        font-size: 2rem;
+        line-height: 2rem;
+        @include tablet {
+            font-size: 2.25rem;
+            line-height: 2.75rem;
+            margin-top: 0;
+        }
+
+    }
+    &__block {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        @include tablet {
+            padding: 1rem 4.5rem;
+        }
+        @include desktop {
+            padding: 1rem 12rem;
+            justify-content: center;
+        }
+        &-right{
+            display: flex;
+            flex-direction: column;
+        }
+    }
+    &__titlebox {
+        min-height: 2.25rem;
+        width: 100%;
+        margin-top: .25rem;
+        padding: .75rem;
+        border-radius: .25rem;
+        border: 1px solid colors.$secondary-mercury;
+        @include tablet {
+            padding: 1rem;
+            width: auto;
+        }
+        @include desktop {
+            width: 30vw;
+        }
+    }
+    &__descriptionbox {
+        min-height: 8rem;
+        max-height: auto;
+        width: 80vw;
+        margin-top: .25rem;
+        padding: .75rem;
+        border-radius: .25rem;
+        border: 1px solid colors.$secondary-mercury;
+        text-align: start;
+        @include tablet {
+            padding: 1rem;
+            width: 65vw;
+        }
+        @include desktop {
+            width: 30vw;
+        }
+    }
+    &__box-description {
+        color: colors.$primary-silver;
+        font-weight: 600;
+    }
+
+    &__button {
+        background-color: colors.$primary-black;
+        color: colors.$primary-white;
+
+        &:hover {
+            background-color: colors.$secondary-black;
+            color: colors.$primary-white;
+        }
+
+    }
+}

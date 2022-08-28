@@ -1,21 +1,18 @@
 import './Video.scss';
-import videosDetailData from '../../data/video-details.json';
+import { Link } from 'react-router-dom'
 
-const Video = ({videosDetailId}) => {
-    let videoDetailsIndex = videosDetailData.find(video => video.id ===videosDetailId);
-
+const Video = ({activeVideo}) => {
+  const { id, image } = activeVideo;
     return (
-    <section className = "activevideo">
-
+      <Link to={`/video/${id}`}>
+        <section className = "activevideo">
             <div className="activevideo__block">
-            <video controls poster={videoDetailsIndex.image}>
+              <video controls poster={image}>
                 <source src="movie.mp4" type="video/mp4"/>
-            </video>
+              </video>
             </div>
-        
-    </section>
-
-    
+        </section>
+    </Link>
   )
 }
 

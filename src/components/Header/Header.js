@@ -1,4 +1,5 @@
 import './Header.scss';
+import { Link } from 'react-router-dom';
 
 function Header() {
   return (
@@ -14,7 +15,7 @@ function Header() {
             <input className="header__search-bar" type={"text"} name="search" placeholder="         Search"/>
             <img className="header__search-avatar"src={require("../../assets/Images/Mohan-muruge.jpg")} alt={"avatar"}/>
             </div>
-            <button className="header__button">UPLOAD</button>
+            <Link to="/upload" className="header__button">UPLOAD</Link>
             <img className="header__search-avatar--tablet"src={require("../../assets/Images/Mohan-muruge.jpg")} alt={"avatar"}/>
           </div>
       </header>
