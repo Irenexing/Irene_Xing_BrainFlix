@@ -16,11 +16,9 @@ function Home () {
   const [activeVideo, setActiveVideo] = useState(null);
 
   const { videoId } = useParams ();
-  const url = "https://project-2-api.herokuapp.com";
-  const apikey = "?api_key=9d0ecb60-9503-43b0-91a2-bdf14a7eb4d7";
-  
+
   useEffect(() => {
-      axios.get(`${url}/videos/${apikey}`)
+      axios.get(`http://localhost:8080/videos/`)
       .then(res => {
         setVideos(res.data);
           }).catch(err => {
@@ -32,7 +30,7 @@ function Home () {
  
     useEffect(() => {
       if (activeVideoId) {
-      axios.get(`${url}/videos/${activeVideoId}${apikey}`)
+      axios.get(`http://localhost:8080/videos/${activeVideoId}`)
       .then(res => {
         setActiveVideo(res.data);
         }).catch(err => {
