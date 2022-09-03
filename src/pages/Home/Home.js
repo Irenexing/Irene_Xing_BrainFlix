@@ -10,13 +10,10 @@ import axios from 'axios';
 
 
 function Home () {
-  //initialize state
-  // const [videosDetailId, setVideosDetailId] = useState([]);
-  // const [videosId, setVideosId] = useState(null);
 
   const [videos, setVideos] = useState([]);
-  const [activeVideo, setActiveVideo] = useState(null);
 
+  const [activeVideo, setActiveVideo] = useState(null);
 
   const { videoId } = useParams ();
   const url = "https://project-2-api.herokuapp.com";

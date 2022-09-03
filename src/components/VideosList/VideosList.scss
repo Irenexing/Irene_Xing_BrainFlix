@@ -27,14 +27,16 @@
             height: 8vw;
         }
         @include tablet {
-            width: 6rem;
-            height: 4rem;
-            object-fit: cover;
+            width: 120px;
+            height: 75px;
         }
     }
     &__title {
         font-weight: 600;
         color: colors.$primary-black;
+        @include tablet {
+            width: 15vw;
+        }
     }
     &__author {
         color: colors.$primary-black;

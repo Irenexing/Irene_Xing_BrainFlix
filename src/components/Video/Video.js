@@ -3,8 +3,9 @@ import { Link } from 'react-router-dom'
 
 const Video = ({activeVideo}) => {
   const { id, image } = activeVideo;
+
     return (
-      <Link to={`/video/${id}`}>
+
         <section className = "activevideo">
             <div className="activevideo__block">
               <video controls poster={image}>
@@ -12,7 +13,7 @@ const Video = ({activeVideo}) => {
               </video>
             </div>
         </section>
-    </Link>
+
   )
 }
 

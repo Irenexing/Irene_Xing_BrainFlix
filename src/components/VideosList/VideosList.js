@@ -2,8 +2,8 @@ import './VideosList.scss';
 import { Link } from "react-router-dom";
 
 const VideosList = ({videos,activeVideo}) => {
+
     return (
-        
             <section className = "videolist">
              <h2 className="videolist__header"> NEXT VIDEOS</h2>
             {videos
@@ -19,6 +19,7 @@ const VideosList = ({videos,activeVideo}) => {
             </div>
             </Link>
         )  })}
+        
         </section>
   
     )

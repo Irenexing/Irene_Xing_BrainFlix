@@ -15,12 +15,12 @@ const VideoDetails = ({ activeVideo }) => {
                         </div>
                         <div className="activevideo__block-bottomright">
                             <div className="activevideo__views">
-                             <img className="activevideo__views-icon" src={require("../../assets/Icons/views.svg").default} alt={"viewicon"}/>
-                             <div className="activevideo__viewsnumber">{activeVideo.views}</div>
+                                <img className="activevideo__views-icon" src={require("../../assets/Icons/views.svg").default} alt={"viewicon"}/>
+                                <div className="activevideo__viewsnumber">{activeVideo.views}</div>
                              </div>
                         <div className="activevideo__likes">
-                        <img className="activevideo__likes-icon" src={require("../../assets/Icons/likes.svg").default} alt={"likesicon"}/>
-                        <div className="activevideo__likesnumber">{activeVideo.likes}</div>
+                            <img className="activevideo__likes-icon" src={require("../../assets/Icons/likes.svg").default} alt={"likesicon"}/>
+                            <div className="activevideo__likesnumber">{activeVideo.likes}</div>
                         </div> 
                     </div>
                 </div>

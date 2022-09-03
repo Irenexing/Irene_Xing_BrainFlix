@@ -21,7 +21,7 @@
                 padding: 1rem 4rem;
             }
             @include desktop {
-                padding: 1rem;
+                margin: 1rem 0rem 1rem 3rem;
             }
 
             &left {
@@ -53,7 +53,8 @@
                 margin: 1rem 3rem; 
             }
             @include tablet {
-                width: 70vw;
+                width: 60vw;
+                margin-left: 5rem;
             }
     }
     &__channel {
@@ -115,7 +116,9 @@
             padding: 0rem 4rem;
         }
         @include desktop {
-            width: 70vw;
+            width: 60vw;
+            margin-left: 6rem;
+            padding: 0rem;
             } 
     }
 }
